@@ -26,6 +26,13 @@
       <li>
         <a href="#"><i class="fa fa-user"></i>Users</a>
       </li>
+      <li>
+        <a href="#" href="{{ route('logout') }}"
+        onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i class="fa fa-user"></i>LOGOYT</a>
+        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+          @csrf
+      </form>
+      </li>
     </ul>
   </aside>
 

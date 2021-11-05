@@ -15,8 +15,8 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
-Route::get('/', 'UserController@showLoginForm')->name('login.index');
-Route::post('/', 'UserController@login')->name('login');
+Route::get('/', 'Auth\LoginController@showLoginForm')->name('login.index');
+Route::post('/', 'Auth\LoginController@login')->name('login');
 
 
 route::middleware(['middleware' => 'auth'])->group(function(){
