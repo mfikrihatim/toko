@@ -22,14 +22,15 @@
   </head>
   <body>
     <div class="container">
-      <form class="form-1">
+      <form class="form-1" action="{{ route('login') }}" method="POST">
+        @csrf
         <h1>Login</h1>
         <label for="email">Email</label>
         <input type="email" name="email" id="email" required />
         <label for="password">Password</label>
         <input type="password" name="password" id="password" required />
         <span>Forgot Password</span>
-        <a href="{{ route('index') }}"><button>Login</button></a>
+        <a href="{{ route('login') }}"><button>Login</button></a>
         
 
         <!-- .........///sign-up///.......... -->

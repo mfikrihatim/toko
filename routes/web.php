@@ -13,7 +13,23 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'UserController@index')->name('login');
-Route::get('/dashboard', 'Controller@index')->name('index');
-Route::get('/user', 'UserController@index')->name('user.index');
-Route::get('/user/create', 'UserController@create')->name('user.create');
+Auth::routes();
+
+Route::get('/', 'UserController@showLoginForm')->name('login.index');
+Route::post('/', 'UserController@login')->name('login');
+
+
+route::middleware(['middleware' => 'auth'])->group(function(){
+    Route::get('/dashboard', 'Controller@index')->name('index');
+    Route::get('/user', 'UserController@index')->name('user.index');
+    Route::get('/user/create', 'UserController@create')->name('user.create');
+});
+
+
+// Route::get('/', function(){
+//     return view('welcome');
+// });
+
+
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

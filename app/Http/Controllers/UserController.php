@@ -14,6 +14,10 @@ class UserController extends BaseController
     public function index(){
         return view ('users.index');
     }
+    public function showLoginForm()
+    {
+        return view('login.login');
+    }
 
     public function login(){
         return view ('login.login');
