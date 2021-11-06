@@ -23,6 +23,7 @@ route::middleware(['middleware' => 'auth'])->group(function(){
     Route::get('/dashboard', 'Controller@index')->name('index');
     Route::get('/user', 'UserController@index')->name('user.index');
     Route::get('/user/create', 'UserController@create')->name('user.create');
+    Route::post('/usersimpan', 'UserController@simpan')->name('user.simpan');
 
     Route::get('/product', 'ProductController@index')->name('product.index');
     Route::get('/product/create', 'ProductController@create')->name('product.create');
