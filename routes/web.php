@@ -26,6 +26,8 @@ route::middleware(['middleware' => 'auth'])->group(function(){
 
     Route::get('/product', 'ProductController@index')->name('product.index');
     Route::get('/product/create', 'ProductController@create')->name('product.create');
+
+    Route::get('/new_order', 'NewOrderController@index')->name('new_order.index');
 });
 
 
