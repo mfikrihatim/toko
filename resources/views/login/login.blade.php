@@ -2,7 +2,7 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>CodePen - Login Page (HTML And CSS)</title>
+  <title>TOKO TEST</title>
   <link rel="stylesheet" href="assets/style2.css">
 
 </head>
