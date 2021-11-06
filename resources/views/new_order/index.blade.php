@@ -5,9 +5,34 @@
 
 <section id="content-wrapper">
     <div class="row py-5">
-        <div class="col-lg-6 pb-5">
-            <a href="{{ route('user.create') }}"><button type="button" class="btn btn-primary">Tambah Data</button></a>
-        </div>
+      <div class="col-lg-12 py-5">
+        <h2 class="content-title">Test</h2>
+        
+        <form>
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Order ID</label>
+                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" disabled>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Password</label>
+                <input type="text" class="form-control" id="exampleInputPassword1">
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Check me out</label>
+              </div>
+            </div>
+          </div>
+           
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
       <div class="col-12">
         <table id="example" class="table table-hover responsive nowrap" style="width:100%">
           <thead>
