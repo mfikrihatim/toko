@@ -11,7 +11,9 @@
             <div class="col-lg-6">
               <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Order ID</label>
-                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="id" disabled>
+                @foreach ($qwer as $datas)
+                <input type="text" value ="{{$datas->id +1}}" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="id" readonly>
+                @endforeach
               </div>
             </div>
             <div class="col-lg-6">
