@@ -31,7 +31,8 @@ route::middleware(['middleware' => 'auth'])->group(function(){
     Route::get('/new_order', 'NewOrderController@index')->name('new_order.index');
     Route::post('/new_order/simpan', 'NewOrderController@simpan')->name('new_order.simpan');
 
-    Route::post('/product/simpan', 'NewOrderController@simpanproduct')->name('new_order.simpanproduct');
+    Route::post('/product/simpanproduct', 'NewOrderController@simpanproduct')->name('new_order.simpanproduct');
+    Route::post('/product/simpan', 'ProductController@simpan')->name('product.simpan');
 });
 
 

@@ -23,21 +23,21 @@
       <h2>Logo</h2>
     </div>
     <ul class="sidebar-nav">
-      <li class="active">
+      <li >
         <a href="#"><i class="fa fa-home"></i>Home</a>
       </li>
-      {{-- <li>
-        <a href="{{ route('product.index') }}}}"><i class="fa fa-plug"></i>Product</a>
-      </li> --}}
+      <li>
+        <a href="{{ route('product.index') }}"><i class="fa fa-plug"></i>Product</a>
+      </li>
       <li>
         <a href="{{ route('user.index') }}"><i class="fa fa-user"></i>Users</a>
       </li>
       <li>
-        <a href="{{ route('new_order.index') }}"><i class="fa fa-user"></i>Users</a>
+        <a href="{{ route('new_order.index') }}"><i class="fa fa-user"></i>New Order</a>
       </li>
       <li>
         <a href="#" href="{{ route('logout') }}"
-        onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i class="fa fa-user"></i>LOGOYT</a>
+        onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i class="fa fa-user"></i>Logout</a>
         <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
           @csrf
       </form>
