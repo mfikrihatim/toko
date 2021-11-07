@@ -14,7 +14,12 @@ class NewOrderController extends BaseController
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
     public function index(){
-        $users = DB::table('tbl_order_header')->get();
+        $users = DB::table('tbl_order_detail')
+            ->join('tbl_order_header', 'tbl_order_detail.order_header_id', '=', 'tbl_order_header.id')
+            // ->join('tbl_order_total', 'tbl_order_header.id', '=', 'tbl_order_total.order_header_id')
+            ->join('tbl_product', 'tbl_order_detail.product_id', '=', 'tbl_product.id')
+            ->select('tbl_order_detail.*', 'tbl_product.*')
+            ->get();
 
         return view ('new_order.index',['new_order' => $users]);
     }

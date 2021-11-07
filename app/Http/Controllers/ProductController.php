@@ -33,4 +33,10 @@ class ProductController extends BaseController
 
         return redirect()->route('product.index');
     }
+
+    public function edit($id){
+        $product = DB::table('tbl_product')->where('id',$id)->get();
+        // passing data product yang didapat ke view edit.blade.php
+        return view('product.edit',['product' => $product]);
+    }
 }

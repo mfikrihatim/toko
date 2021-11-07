@@ -3,23 +3,17 @@
 <section id="content-wrapper">
     <div class="row pt-0">
       <div class="col-lg-12 pt-0">
-        <h2 class="content-title">Test</h2>
+        <h2 class="content-title">Order List</h2>
         
-        <form action="{{ route('new_order.simpan') }}" method="POST">
+        <form action="" method="POST">
           @csrf
           <div class="row">
             <div class="col-lg-6">
               <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Order ID</label>
-                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="id" disabled>
+                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="id">
               </div>
             </div>
-            <div class="col-lg-6">
-              <div class="mb-3">
-                <label for="exampleInputPassword1" class="form-label">Order Date</label>
-                <input type="date" class="form-control" id="exampleInputPassword1" name="order_date">
-              </div>
-            </div>  
             <div class="col-lg-6">
               <div class="mb-3">
                 <label for="exampleInputPassword1" class="form-label">Customer Name</label>
@@ -27,30 +21,28 @@
               </div>
             </div>
           </div>
-          <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#largeModal">Tambah Product</a>
-          <button type="submit" class="btn btn-primary">Submit</button>
+          <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#largeModal">Filter</a>
+          <button type="submit" class="btn btn-primary">New Order</button>
         </form>
       </div>
       <div class="col-12">
         <table id="example" class="table table-hover responsive nowrap" style="width:100%">
           <thead>
             <tr>
-              <th>Product ID</th>
-              <th>Product Name</th>
-              <th>Unit Price</th>
-              <th>QTY</th>
-              <th>Sub Total</th>
+              <th>Order ID</th>
+              <th>Order Date</th>
+              <th>Customer Name</th>
+              <th>Total Price</th>
               <th>Actions</th>
             </tr>
           </thead>
           <tbody>
-            @foreach ($new_order as $data)
+            @foreach ($order as $data)
             <tr>
               <td>{{ $data->id }}</td>
-              <td>{{ $data->product_name }}</td>
-              <td>{{ $data->unit_price }}</td>
-              <td>{{ $data->qty }}</td>
-              <td>{{ $data->subtotal }}</td>
+              <td>{{ $data->order_date }}</td>
+              <td>{{ $data->customer_name }}</td>
+              <td>{{ $data->total_price }}</td>
               <td>
                 <div class="dropdown">
                   <button class="btn btn-sm btn-icon" type="button" id="dropdownMenuButton2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
