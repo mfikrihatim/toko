@@ -22,16 +22,16 @@
                 <label for="exampleInputPassword1" class="form-label">Order Date</label>
                 <input type="date" class="form-control" id="exampleInputPassword1" name="order_date">
               </div>
-              <div class="col-lg-6">
-                <div class="mb-3">
-                  <label for="exampleInputPassword1" class="form-label">Customer Name</label>
-                  <input type="text" class="form-control" id="exampleInputPassword1" name="customer_name">
-                </div>
-            </div>
+            </div>  
+            <div class="col-lg-6">
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Customer Name</label>
+                <input type="text" class="form-control" id="exampleInputPassword1" name="customer_name">
+              </div>
             </div>
           </div>
-           
-            <button type="submit" class="btn btn-primary">Submit</button>
+          <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#largeModal">Tambah Product</a>
+          <button type="submit" class="btn btn-primary">Submit</button>
         </form>
       </div>
       <div class="col-12">
@@ -69,6 +69,26 @@
         </table>
       </div>
     </div>
+    <!-- large modal -->
+    <div class="modal fade" id="largeModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title" id="myModalLabel">Large Modal</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <h3>Modal Body</h3>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
 <script src='https://code.jquery.com/jquery-3.3.1.slim.min.js'></script>
@@ -77,5 +97,7 @@
 <script src='https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.19/js/jquery.dataTables.min.js'></script>
 <script src='https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js'></script>
 <script src='https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js'>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+<script src='https://unpkg.com/popper.js'></script>
 </script><script  src="assets/script.js"></script>
 @endsection
