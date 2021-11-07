@@ -17,14 +17,13 @@
 <body>
 <!-- partial:index.partial.html -->
 <div id="wrapper">
-
   <aside id="sidebar-wrapper">
     <div class="sidebar-brand">
       <h2>Logo</h2>
     </div>
     <ul class="sidebar-nav">
       <li >
-        <a href="#"><i class="fa fa-home"></i>Home</a>
+        <a href="{{ route('index') }}"><i class="fa fa-home"></i>Home</a>
       </li>
       <li>
         <a href="{{ route('product.index') }}"><i class="fa fa-plug"></i>Product</a>
@@ -34,6 +33,9 @@
       </li>
       <li>
         <a href="{{ route('new_order.index') }}"><i class="fa fa-user"></i>New Order</a>
+      </li>
+      <li>
+        <a href="{{ route('order.index') }}"><i class="fa fa-user"></i>Order</a>
       </li>
       <li>
         <a href="#" href="{{ route('logout') }}"
