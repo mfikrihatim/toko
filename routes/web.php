@@ -27,11 +27,16 @@ route::middleware(['middleware' => 'auth'])->group(function(){
 
     Route::get('/product', 'ProductController@index')->name('product.index');
     Route::get('/product/create', 'ProductController@create')->name('product.create');
+    Route::get('/product/edit{id}', 'ProductController@edit')->name('product.edit');
 
     Route::get('/new_order', 'NewOrderController@index')->name('new_order.index');
     Route::post('/new_order/simpan', 'NewOrderController@simpan')->name('new_order.simpan');
 
-    Route::post('/product/simpan', 'NewOrderController@simpanproduct')->name('new_order.simpanproduct');
+    Route::get('/order', 'OrderController@index')->name('order.index');
+    Route::post('/order/simpan', 'NewOrderController@simpan')->name('new_order.simpan');
+
+    Route::post('/product/simpanproduct', 'NewOrderController@simpanproduct')->name('new_order.simpanproduct');
+    Route::post('/product/simpan', 'ProductController@simpan')->name('product.simpan');
 });
 
 
