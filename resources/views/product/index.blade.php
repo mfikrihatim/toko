@@ -1,27 +1,26 @@
 @extends('index')
 @section('content')
-
-
-
 <section id="content-wrapper">
     <div class="row py-5">
         <div class="col-lg-6 pb-5">
-            <a href="{{ route('user.create') }}"><button type="button" class="btn btn-primary">Tambah Data</button></a>
+            <a href="{{ route('product.create') }}"><button type="button" class="btn btn-primary">Tambah Data</button></a>
         </div>
       <div class="col-12">
         <table id="example" class="table table-hover responsive nowrap" style="width:100%">
           <thead>
             <tr>
-              <th>Client Name</th>
-              <th>Phone Number</th>
+              <th>Product Name</th>
+              <th>Unit Price</th>
+              <th>Qty</th>
               <th>Actions</th>
             </tr>
           </thead>
           <tbody>
-            @foreach ($users as $data)
+            @foreach ($product as $data)
             <tr>
-              <td>{{ $data->name }}</td>
-              <td>{{ $data->email }}</td>
+              <td>{{ $data->product_name }}</td>
+              <td>{{ $data->unit_price }}</td>
+              <td>{{ $data->qty }}</td>
               <td>
                 <div class="dropdown">
                   <button class="btn btn-sm btn-icon" type="button" id="dropdownMenuButton2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -36,7 +35,6 @@
               </td>
             </tr>
             @endforeach
-            
           </tbody>
         </table>
       </div>
