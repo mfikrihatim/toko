@@ -5,7 +5,7 @@
       <div class="col-lg-12 pt-0">
         <h2 class="content-title">Order List</h2>
         
-        <form action="" method="POST">
+        {{-- <form action="" method="POST">
           @csrf
           <div class="row">
             <div class="col-lg-6">
@@ -23,7 +23,7 @@
           </div>
           <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#largeModal">Filter</a>
           <button type="submit" class="btn btn-primary">New Order</button>
-        </form>
+        </form> --}}
       </div>
       <div class="col-12">
         <table id="example" class="table table-hover responsive nowrap" style="width:100%">
@@ -120,8 +120,5 @@
 <script src='https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.19/js/jquery.dataTables.min.js'></script>
 <script src='https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js'></script>
 <script src='https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js'>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
-<script src='https://unpkg.com/popper.js'></script>
-<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
 </script><script  src="assets/script.js"></script>
 @endsection

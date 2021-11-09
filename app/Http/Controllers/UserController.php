@@ -8,6 +8,7 @@ use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller as BaseController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 
 class UserController extends BaseController
@@ -15,9 +16,10 @@ class UserController extends BaseController
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
     public function index(){
+        $user = Auth::user();
         $users = DB::table('users')->get();
 
-        return view ('users.index',['users' => $users]);
+        return view ('users.index',['users' => $users, 'user' => $user]);
     }
 
     public function showLoginForm()
@@ -30,6 +32,10 @@ class UserController extends BaseController
     }
 
     public function create(){
+        $user = Auth::user();
+        if ($user->role_id == 2){
+            return redirect()->route('user.index');
+        }
         return view ('users.create');
     }
 

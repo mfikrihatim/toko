@@ -2,7 +2,7 @@
 @section('content')
 <section id="content-wrapper">
     <div class="row pt-0">
-      <div class="col-lg-12 pt-0">
+      <div class="col-lg-12 pt-0 pb-2">
         <h2 class="content-title">Test</h2>
         
         <form action="{{ route('new_order.simpan') }}" method="POST">
@@ -12,7 +12,7 @@
               <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Order ID</label>
                 @foreach ($qwer as $datas)
-                <input type="text" value ="{{$datas->id +1}}" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="id" readonly>
+                <input type="text" value ="{{$datas->id +1}}" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="id" disabled>
                 @endforeach
               </div>
             </div>
@@ -130,8 +130,5 @@
 <script src='https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.19/js/jquery.dataTables.min.js'></script>
 <script src='https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js'></script>
 <script src='https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js'>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
-<script src='https://unpkg.com/popper.js'></script>
-<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
 </script><script  src="assets/script.js"></script>
 @endsection

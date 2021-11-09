@@ -7,6 +7,7 @@ use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Routing\Controller as BaseController;
 
 class ProductController extends BaseController
@@ -14,12 +15,17 @@ class ProductController extends BaseController
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
     public function index(){
+        $user = Auth::user();
         $users = DB::table('tbl_product')->get();
 
-        return view ('product.index',['product' => $users]);
+        return view ('product.index',['product' => $users,  'user' => $user]);
     }
 
     public function create(){
+        $user = Auth::user();
+        if ($user->role_id == 2){
+            return redirect()->route('product.index');
+        }
         return view ('product.create');
     }
 
